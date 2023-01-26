@@ -47,3 +47,11 @@
    - register plugin ที่ initializer ที่เป็นตัว init plugin ui
 
 `Note :` npm run develop --watch-admin(เพื่อให้ rebuild เมื่อเราทำการ save+change code)
+
+## Ref
+
+- https://strapi.io/plugin-resources
+- https://design-system.strapi.io/
+- https://strapi.io/blog/creating-strapi-dynamic-zone-in-nuxtjs-app
+- https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-admin-reset-user-password
+- https://github.com/PaulBratslavsky/plugindev-intro-video-3-resources
