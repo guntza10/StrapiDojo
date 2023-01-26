@@ -4,7 +4,8 @@
   "info": {
     "singularName": "student",
     "pluralName": "students",
-    "displayName": "Student"
+    "displayName": "Student",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,21 @@
     },
     "no": {
       "type": "integer"
+    },
+    "Math": {
+      "type": "decimal"
+    },
+    "Biology": {
+      "type": "decimal"
+    },
+    "English": {
+      "type": "decimal"
+    },
+    "Physics": {
+      "type": "decimal"
+    },
+    "Chemistry": {
+      "type": "decimal"
     }
   }
 }
