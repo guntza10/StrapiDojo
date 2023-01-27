@@ -80,6 +80,21 @@
 10. index.js => export ทุกอย่างของ server app(backend ของ plugin)
 11. register function
 
+### step request for custom content type
+
+1. send request
+   - route จะ match path แล้ว call controller
+   - controller จะ call service ต่อ
+   - service จะ execute business logic ที่อยู่ใน service
+
+### Step to create controller,service,route
+
+1. สร้างไฟล์ controller ของเรา ที่ folder controllers
+2. เอา controller ที่เราสร้างไป export ใช้ที่ controllers/index.js
+3. สร้างไฟล์ service ของเรา ที่ folder services
+4. เอา service ที่เราสร้างไป export ใช้ที่ services/index.js
+5. define route ที่ routes/index.js
+
 ## Ref
 
 - https://strapi.io/plugin-resources
@@ -90,3 +105,4 @@
 - https://strapi.io/blog/how-to-create-a-strapi-v4-plugin-add-a-content-type-to-a-plugin-3-6
 - https://docs.strapi.io/developer-docs/latest/development/backend-customization/models.html#model-attributes
 - https://docs.strapi.io/developer-docs/latest/developer-resources/plugin-api-reference/server.html#entry-file
+- https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/entity-service/crud.html#findone
