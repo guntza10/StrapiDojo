@@ -1,21 +1,35 @@
-import React, { memo, useState } from "react";
+import React, { memo, useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 import { BaseHeaderLayout, ContentLayout } from "@strapi/design-system/Layout";
 import { EmptyStateLayout } from "@strapi/design-system/EmptyStateLayout";
 import { Illo } from "../../components/Illo";
 import { Button } from "@strapi/design-system/Button";
 import Plus from "@strapi/icons/Plus";
+import { LoadingIndicatorPage } from "@strapi/helper-plugin";
 
 import TodoModal from "../../components/TodoModal";
 import TodoCount from "../../components/TodoCount";
 import TodoTable from "../../components/TodoTable";
+
+import demoRequest from "../../api/demo";
 
 // import PropTypes from 'prop-types';
 
 const HomePage = () => {
   const [todoData, setTodoData] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(async () => {
+    await fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    if (isLoading === false) setIsLoading(true);
+    const demo = await demoRequest.getAllDemos();
+    setTodoData(demo);
+    setIsLoading(false);
+  };
   async function addTodo(data) {
     setTodoData([...todoData, { ...data, id: nanoid(), isDone: false }]);
   }
@@ -31,6 +45,8 @@ const HomePage = () => {
   async function editTodo(id, data) {
     alert("Add Edit Todo in API");
   }
+
+  if (isLoading) return <LoadingIndicatorPage />;
   return (
     <>
       <BaseHeaderLayout

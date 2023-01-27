@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demo2s",
+  "info": {
+    "singularName": "demo2",
+    "pluralName": "demo2s",
+    "displayName": "Demo2"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "no": {
+      "type": "integer"
+    }
+  }
+}
