@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demoes",
+  "info": {
+    "singularName": "demo",
+    "pluralName": "demoes",
+    "displayName": "Demo"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    },
+    "content-type-builder": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "isDone": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

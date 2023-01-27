@@ -1,13 +1,6 @@
-/*
- *
- * HomePage
- *
- */
-
-import React, { useState } from "react";
-import { BaseHeaderLayout, ContentLayout } from "@strapi/design-system/Layout";
+import React, { memo, useState } from "react";
 import { nanoid } from "nanoid";
-
+import { BaseHeaderLayout, ContentLayout } from "@strapi/design-system/Layout";
 import { EmptyStateLayout } from "@strapi/design-system/EmptyStateLayout";
 import { Illo } from "../../components/Illo";
 import { Button } from "@strapi/design-system/Button";
@@ -16,6 +9,8 @@ import Plus from "@strapi/icons/Plus";
 import TodoModal from "../../components/TodoModal";
 import TodoCount from "../../components/TodoCount";
 import TodoTable from "../../components/TodoTable";
+
+// import PropTypes from 'prop-types';
 
 const HomePage = () => {
   const [todoData, setTodoData] = useState([]);
@@ -62,6 +57,7 @@ const HomePage = () => {
         ) : (
           <>
             <TodoCount count={todoData.length} />
+
             <TodoTable
               todoData={todoData}
               setShowModal={setShowModal}
@@ -78,4 +74,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default memo(HomePage);

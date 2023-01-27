@@ -9,7 +9,7 @@
 - marketplace มี plugin สำเร็จรูปมาให้ใช้
 - เราสามารถสร้าง plugin ของเราเองได้
 
-### Step to create
+### Step to create Plugin
 
 1. strapi generate (plugin)
 2. สร้าง plugin config ./config/plugins.js แล้วนำ config ที่ได้จากการ generate ไปวาง
@@ -48,6 +48,38 @@
 
 `Note :` npm run develop --watch-admin(เพื่อให้ rebuild เมื่อเราทำการ save+change code)
 
+### Step to create Content-Type
+
+1. strapi generate (Content-Type)
+2. เลือก option ต่างๆที่เราต้องการจะสร้างให้กับ content-type
+3. strapi generate content-type เสร็จ จะได้ไฟล์ schema ของ content-type ที่ถูก generate ที่ `\plugins\<pluginname>\server\content-types\<content type name>\schema.json`
+4. ในไฟล์ schema.json ของ content-type จะมีรายละเอียด
+   - collectionType
+   - collectionName
+   - basic info
+   - options
+   - attribute ของ content-type (สามารถ modify attribute ได้) (https://docs.strapi.io/developer-docs/latest/development/backend-customization/models.html#model-attributes)
+   - pluginOptions => เอาไว้จัดการว่าต้องให้แสดงที่ content-manger,content-builder มั้ย
+5. พอสร้าง schema เสร็จต้อง export ไปใช้ที่ index.js ของ folder content-types ด้วยเพื่อให้แสดงที่ Content Manager,Content-Type Builder
+   - สร้าง index.js เอาไว้รวม export ที่ folder content-type(ที่เรา generate)
+   - import ไปใช้ที่ index.js ของ folder content-type
+
+`Note :` strapi console => cli command ที่เอาไว้ log ดู info ต่างๆแบบ real time เช่น strapi.contentTypes,strapi.contentType("key content-type")
+
+### server structure
+
+1. config folder
+2. content-types folder => content-type ที่ generate ผูกกับ plugin
+3. controllers folder (x)
+4. middlewares folder
+5. policies folder
+6. routes folder (x)
+7. services folder (x)
+8. boostrap function
+9. destroy function
+10. index.js => export ทุกอย่างของ server app(backend ของ plugin)
+11. register function
+
 ## Ref
 
 - https://strapi.io/plugin-resources
@@ -55,3 +87,6 @@
 - https://strapi.io/blog/creating-strapi-dynamic-zone-in-nuxtjs-app
 - https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-admin-reset-user-password
 - https://github.com/PaulBratslavsky/plugindev-intro-video-3-resources
+- https://strapi.io/blog/how-to-create-a-strapi-v4-plugin-add-a-content-type-to-a-plugin-3-6
+- https://docs.strapi.io/developer-docs/latest/development/backend-customization/models.html#model-attributes
+- https://docs.strapi.io/developer-docs/latest/developer-resources/plugin-api-reference/server.html#entry-file
