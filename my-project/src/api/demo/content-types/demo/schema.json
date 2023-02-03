@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demos",
+  "info": {
+    "singularName": "demo",
+    "pluralName": "demos",
+    "displayName": "demo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "todo": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
