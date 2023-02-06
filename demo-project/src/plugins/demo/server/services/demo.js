@@ -10,6 +10,9 @@ module.exports = ({ strapi }) => ({
      */
     return await strapi.entityService.findMany("plugin::demo.demo", query);
   },
+  async find2(query) {
+    return await strapi.entityService.findMany("api::category.category", query);
+  },
 
   async delete(id) {
     return await strapi.entityService.delete("plugin::demo.demo", id);

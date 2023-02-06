@@ -6,6 +6,11 @@ const demoRequests = {
       method: "GET",
     });
   },
+  getAllDemos2: async () => {
+    return await request("/demo/find2", {
+      method: "GET",
+    });
+  },
 
   addDemo: async (data) => {
     return await request("/demo/create", {

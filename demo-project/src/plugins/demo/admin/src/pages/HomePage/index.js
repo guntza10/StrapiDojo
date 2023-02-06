@@ -22,13 +22,21 @@ const HomePage = () => {
 
   useEffect(async () => {
     await fetchData();
+    await fetchData2();
   }, []);
 
   const fetchData = async () => {
     if (isLoading === false) setIsLoading(true);
     const demo = await demoRequest.getAllDemos();
+    console.log("fetchData");
+    console.log("demo", demo);
     setTodoData(demo);
     setIsLoading(false);
+  };
+  const fetchData2 = async () => {
+    const demo = await demoRequest.getAllDemos2();
+    console.log("fetchData2");
+    console.log("demo", demo);
   };
   async function addTodo(data) {
     setTodoData([...todoData, { ...data, id: nanoid(), isDone: false }]);

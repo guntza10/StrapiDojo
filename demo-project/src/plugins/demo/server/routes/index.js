@@ -19,6 +19,15 @@ module.exports = [
     },
   },
   {
+    method: "GET",
+    path: "/find2",
+    handler: "demo.find2",
+    config: {
+      policies: [],
+      auth: false,
+    },
+  },
+  {
     method: "POST",
     path: "/create",
     handler: "demo.create",

@@ -11,6 +11,13 @@ module.exports = {
       ctx.throw(500, err);
     }
   },
+  async find2(ctx) {
+    try {
+      return await strapi.plugin("demo").service("demo").find2(ctx.query);
+    } catch (err) {
+      ctx.throw(500, err);
+    }
+  },
 
   async delete(ctx) {
     try {
