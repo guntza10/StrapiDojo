@@ -107,3 +107,4 @@
 - https://docs.strapi.io/developer-docs/latest/developer-resources/plugin-api-reference/server.html#entry-file
 - https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/entity-service/crud.html#findone
 - https://docs.strapi.io/developer-docs/latest/development/plugins-development.html#create-a-plugin
+- https://strapi.io/blog/deep-filtering-alpha-26
