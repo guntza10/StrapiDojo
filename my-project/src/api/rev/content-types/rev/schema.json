@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "revs",
+  "info": {
+    "singularName": "rev",
+    "pluralName": "revs",
+    "displayName": "rev",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "rich_text": {
+      "type": "richtext"
+    },
+    "password": {
+      "type": "password"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "enum": {
+      "type": "enumeration",
+      "enum": [
+        "enum1",
+        "enum2",
+        "enum3"
+      ]
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "boolean": {
+      "type": "boolean"
+    }
+  }
+}
