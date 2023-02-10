@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testhahas",
+  "info": {
+    "singularName": "testhaha",
+    "pluralName": "testhahas",
+    "displayName": "testhaha"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test_name": {
+      "type": "string"
+    },
+    "email_test": {
+      "type": "email"
+    },
+    "test_rich_text": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "test_type": {
+      "type": "enumeration",
+      "enum": [
+        "gunt",
+        "diamond"
+      ]
+    },
+    "birth_date": {
+      "type": "datetime"
+    },
+    "isSingle": {
+      "type": "boolean"
+    }
+  }
+}
