@@ -109,3 +109,4 @@
 - https://docs.strapi.io/developer-docs/latest/development/plugins-development.html#create-a-plugin
 - https://strapi.io/blog/deep-filtering-alpha-26
 - https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest/populating-fields.html#relation-media-fields
+- https://stackoverflow.com/questions/49125064/how-to-show-hide-password-in-textformfield

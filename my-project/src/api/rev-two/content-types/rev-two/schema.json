@@ -4,7 +4,8 @@
   "info": {
     "singularName": "rev-two",
     "pluralName": "rev-twos",
-    "displayName": "RevTwo"
+    "displayName": "RevTwo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -36,6 +37,9 @@
     },
     "boolean": {
       "type": "boolean"
+    },
+    "new_password": {
+      "type": "password"
     }
   }
 }
